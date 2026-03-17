@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Reliability-X AI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+<title>Reliability-X AI</title>
 
+<style>
 body {
   margin:0;
-  font-family: Arial;
-  background:#0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#0f172a,#020617);
   color:white;
 }
 
@@ -17,56 +17,65 @@ header {
   display:flex;
   justify-content:space-between;
   padding:20px;
-  background:#020617;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
 }
 
 .hero {
   text-align:center;
-  padding:60px 20px;
+  padding:80px 20px;
 }
 
 .hero h1 {
-  font-size:32px;
+  font-size:35px;
 }
 
 .hero button {
-  padding:12px 20px;
+  padding:12px 25px;
   background:orange;
   border:none;
+  border-radius:8px;
   cursor:pointer;
 }
 
 .products {
-  padding:20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .card {
-  background:#1e293b;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  margin:20px;
   padding:20px;
-  margin:15px;
-  border-radius:10px;
+  border-radius:15px;
+  width:250px;
+  transition:0.3s;
 }
 
-.card button {
+.card:hover {
+  transform:scale(1.05);
+}
+
+button {
+  padding:10px;
   background:orange;
   border:none;
-  padding:10px;
+  border-radius:6px;
   cursor:pointer;
 }
 
-#paymentBox {
+#payment {
   display:none;
-  background:#020617;
-  padding:20px;
-  margin:20px;
-  border-radius:10px;
-}
-
-footer {
   text-align:center;
   padding:20px;
 }
 
+footer {
+  text-align:center;
+  padding:30px;
+}
 </style>
 </head>
 
@@ -77,51 +86,63 @@ footer {
 </header>
 
 <section class="hero">
-<h1>Master Oil Analysis & Predict Machine Failure</h1>
-<p>Premium PDF & PPT for Engineers</p>
-<button onclick="showProducts()">Explore Products</button>
+<h1>Predict Machine Failures Before They Happen</h1>
+<p>Premium Oil Analysis & Predictive Maintenance Guides</p>
+<button onclick="scrollToProducts()">Explore Now</button>
 </section>
 
 <section class="products" id="products">
 
 <div class="card">
 <h3>Oil Analysis Master Guide</h3>
-<p>Complete ICML + Industry Practical</p>
+<p>ICML + Industry Level</p>
 <p><b>₹499</b></p>
-<button onclick="buy()">Buy Now</button>
+
+<a href="yourpdf.pdf" target="_blank">📄 Preview</a><br><br>
+
+<button onclick="showPayment()">Buy Now</button>
 </div>
 
 <div class="card">
 <h3>Predictive Maintenance Guide</h3>
-<p>Real Industry Strategy</p>
-<p><b>₹699</b></p>
-<button onclick="buy()">Buy Now</button>
+<p>Real Case Study + Practical</p>
+<p><b>₹999</b></p>
+
+<a href="yourpdf2.pdf" target="_blank">📄 Preview</a><br><br>
+
+<button onclick="showPayment()">Buy Now</button>
 </div>
 
 </section>
 
-<div id="paymentBox">
-<h3>Payment Details</h3>
-<p>UPI: <b id="upi">arijitchoudhary@ybl</b></p>
+<div id="payment">
+<h2>Payment Details</h2>
+
+<p>UPI ID: <b id="upi">arijitchoudhary@ybl</b></p>
 <button onclick="copyUPI()">Copy UPI</button>
 
-<p>After payment send screenshot:</p>
-<a href="https://wa.me/919348678668">WhatsApp</a>
+<br><br>
+
+<a href="https://wa.me/919348678968">
+<button>Send Payment Screenshot (WhatsApp)</button>
+</a>
+
 </div>
 
 <footer>
-<p>Email: arijitraychoudhary44@gmail.com</p>
-<p>Phone: 919348678968</p>
+<p>📧 Email: arijitraychoudhary44@gmail.com</p>
+<p>📱 Phone: 919348678968</p>
+<p>📍 Balasore,Odisha,756035, India</p>
 </footer>
 
 <script>
 
-function showProducts(){
-document.getElementById("products").scrollIntoView();
+function scrollToProducts(){
+document.getElementById("products").scrollIntoView({behavior:"smooth"});
 }
 
-function buy(){
-document.getElementById("paymentBox").style.display="block";
+function showPayment(){
+document.getElementById("payment").style.display="block";
 }
 
 function copyUPI(){
