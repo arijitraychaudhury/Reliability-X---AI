@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OilVision Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>OilVision Pro</h1>
+  <button onclick="toggleMode()">🌙</button>
+</header>
+
+<section class="hero">
+  <h2>Master Oil Analysis & Predict Failures</h2>
+  <p>Professional PDF & PPT guides for engineers</p>
+  <button onclick="scrollToProducts()">Download Now</button>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+
+  <div class="card">
+    <h3>Oil Analysis Guide</h3>
+    <p>Complete PDF for ICML & Industry</p>
+    <p>₹199</p>
+    <button onclick="buyNow()">Buy Now</button>
+  </div>
+
+</section>
+
+<div id="payment" class="hidden">
+  <h2>Payment Details</h2>
+  <p>UPI ID: <b>yourupi@upi</b></p>
+  <button onclick="copyUPI()">Copy UPI</button>
+  <p>After payment send screenshot:</p>
+  <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+</div>
+
+<footer>
+  <p>Contact: yourmail@gmail.com | 91XXXXXXXXXX</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
